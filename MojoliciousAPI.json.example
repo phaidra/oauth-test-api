@@ -1,0 +1,23 @@
+{
+  "hypnotoad": {
+    "listen": [
+      "http://*:3000"
+    ],
+    "proxy": 1,
+    "max_message_size": 20737418240,
+    "heartbeat_timeout": 1209600,
+    "inactivity_timeout": 0,
+    "graceful_timeout": 5
+  },
+  "mode": "production",
+  "secret": "changeme",
+  "ssl_ca_path": "/etc/ssl/certs",
+  "authn": {
+    "oauthprovider": {
+      "key": "app_key",
+      "secret": "s3cr3t",
+      "authorize_url": "https://auth.server/authorize",
+      "token_url": "https://auth.server/token"
+    }
+  }
+}

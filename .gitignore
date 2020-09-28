@@ -1,0 +1,6 @@
+hypnotoad.pid
+.project
+.buildpath
+MojoliciousAPI.json
+mojolicious-api.log*
+.mojolicious-api.log.LCK
