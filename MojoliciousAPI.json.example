@@ -13,11 +13,11 @@
   "secret": "changeme",
   "ssl_ca_path": "/etc/ssl/certs",
   "authn": {
-    "oauthprovider": {
-      "key": "app_key",
-      "secret": "s3cr3t",
-      "authorize_url": "https://auth.server/authorize",
-      "token_url": "https://auth.server/token"
+    "oauth": {
+      "authorization_server": "example.com",
+      "client_id": "my_app",
+      "client_secret": "s3cr3t",
+      "scope": "openid email profile"
     }
   }
 }
