@@ -21,12 +21,12 @@ sub startup {
   if($config->{ssl_ca_path}) {
     $self->app->log->debug("Setting SSL_ca_path: ".$config->{ssl_ca_path});
     IO::Socket::SSL::set_defaults(
-      SSL_ca_path => $config->{ssl_ca_path},
+      SSL_ca_path => $config->{ssl_ca_path}
     );
   }
 
   $self->plugin("OAuth2" => {
-    oauthprovider => $config->{oauthprovider};
+    oauthprovider => $config->{authn}->{oauthprovider}
   });
 
   my $r = $self->routes;
