@@ -1,1 +1,3 @@
-<center><h1>My oauth token: <%= $token %></h1></center>
+<center>username: <%= $username %></center>
+<center><h1><a href="/logout">logout</a></h1></center>
+<center>access token: <%= $access_token %></center>

@@ -1,1 +1,1 @@
-<center><h1><%= link_to "Login", $c->oauth2->auth_url("oauthprovider", scope => "oauth-test") %></h1></center>
+<center><h1><%= link_to "Login", $authorizeurl %></h1></center>

@@ -26,7 +26,12 @@ sub startup {
   }
 
   $self->plugin("OAuth2" => {
-    oauthprovider => $config->{authn}->{oauthprovider}
+    oauthprovider => {
+      key => $config->{authn}->{oauth}->{client_id},
+      secret => $config->{authn}->{oauth}->{client_secret},
+      authorize_url => "https://".$config->{authn}->{oauth}->{authorization_server}."/authorize?response_type=code",
+      token_url => "https://".$config->{authn}->{oauth}->{authorization_server}."/token"
+    }
   });
 
   my $r = $self->routes;
