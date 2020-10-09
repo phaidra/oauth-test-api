@@ -1,7 +1,7 @@
 {
   "hypnotoad": {
     "listen": [
-      "http://*:3000"
+      "http://example.com:3000"
     ],
     "proxy": 1,
     "max_message_size": 20737418240,
@@ -12,12 +12,25 @@
   "mode": "production",
   "secret": "changeme",
   "ssl_ca_path": "/etc/ssl/certs",
-  "authn": {
+  "auth": {
     "oauth": {
       "authorization_server": "example.com",
       "client_id": "my_app",
       "client_secret": "s3cr3t",
       "scope": "openid email profile"
+      "redirect_uri": "http://example.com:3000/connect",
+      "logout_redirect_uri": "http://example.com:3000",
+      "jwk": { # get this from the /jwk endpoint
+        "keys": [
+          {
+            "kty": "...",
+            "e": "...",
+            "kid": "...",
+            "alg": "...",
+            "n": "..."
+          }
+        ]
+      }
     }
   }
 }
